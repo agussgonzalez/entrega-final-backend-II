@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>productos</title>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="/js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            {{#if user}}
+                <!-- Muestra una "A" si el rol es admin, una "U" si el rol es user -->
+                {{#ifEquals user.role 'admin'}}
+                    <span style="color: red;">A</span> <!-- O cualquier estilo que prefieras -->
+                {{else}}
+                    <span style="color: blue;">U</span>
+                {{/ifEquals}}
+            {{/if}}
+        </nav>
+    </header>
+
+    {{{body}}}
+</body>
+</html>

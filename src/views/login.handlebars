@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
+    <h1 class="title">Iniciar Sesión</h1>
+    <form action="/api/sessions/login" method="POST" class="formContainer">
+        <label for="email" class="formLabel">Email:</label>
+        <input type="email" name="email" class="formInput" required>
+        <label for="password" class="formLabel">Contraseña:</label>
+        <input type="password" name="password" class="formInput" required>
+        <button type="submit" class="formButton">Iniciar Sesión</button>
+    </form>
+</body>
+</html>

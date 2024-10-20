@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+</head>
+<body>
+    <h1>Detalles del Ticket de Compra</h1>
+
+    <!-- Muestra el código del ticket -->
+    <p><strong>Código del Ticket:</strong> {{ticket.code}}</p>
+
+    <!-- Muestra el ID del comprador -->
+    <p><strong>ID del Comprador:</strong> {{ticket.purchaser_id}}</p>
+
+    <!-- Muestra el comprador (email) -->
+    <p><strong>Comprador (Email):</strong> {{ticket.purchaser}}</p>
+
+    <!-- Muestra la fecha y hora de compra -->
+    <p><strong>Fecha de Compra:</strong> {{ticket.purchase_datetime}}</p>
+
+    <!-- Muestra los productos comprados -->
+    <h2>Productos Comprados:</h2>
+    <ul>
+        {{#each ticket.products}}
+        <li>Producto ID: {{this.product_id}}, Cantidad: {{this.quantity}}, Precio: ${{this.price}}</li>
+        {{/each}}
+    </ul>
+
+    <!-- Muestra el método de pago -->
+    <p><strong>Método de Pago:</strong> {{ticket.paymentMethod}}</p>
+
+    <!-- Muestra el monto total -->
+    <p><strong>Total:</strong> ${{ticket.amount}}</p>
+
+    <!-- Muestra los impuestos -->
+    <p><strong>Impuestos:</strong> ${{ticket.taxes}}</p>
+
+    <!-- Muestra los detalles del envío -->
+    <h2>Detalles del Envío:</h2>
+    <p><strong>Dirección:</strong> {{ticket.shippingDetails.address}}</p>
+    <p><strong>Ciudad:</strong> {{ticket.shippingDetails.city}}</p>
+    <p><strong>Código Postal:</strong> {{ticket.shippingDetails.postalCode}}</p>
+    <p><strong>País:</strong> {{ticket.shippingDetails.country}}</p>
+
+    <!-- Botón de Pago -->
+    <button id="checkout-button">Ir al Pago</button>
+</body>
+</html>

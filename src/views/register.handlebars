@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+    <link rel="stylesheet" href="/css/style.css"> 
+</head>
+<body>
+    <h1 class="title">Registrarse</h1>
+    <form action="/api/sessions/register" method="POST" class="formContainer">
+        <label for="first_name" class="formLabel">Nombre:</label>
+        <input type="text" name="first_name" class="formInput" required>
+        <label for="last_name" class="formLabel">Apellido:</label>
+        <input type="text" name="last_name" class="formInput" required>
+        <label for="email" class="formLabel">Email:</label>
+        <input type="email" name="email" class="formInput" required>
+        <label for="age" class="formLabel">Edad:</label>
+        <input type="number" name="age" class="formInput" required>
+        <label for="password" class="formLabel">Contraseña:</label>
+        <input type="password" name="password" class="formInput" required>
+        <button type="submit" class="formButton">Registrarse</button>
+    </form>
+</body>
+</html>
